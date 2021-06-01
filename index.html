@@ -12,7 +12,7 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       }
-      #inputs {
+      div {
         display: flex;
         flex-flow: column nowrap;
         width: 75%;
@@ -22,15 +22,46 @@
         text-align: center;
         align-items: center;
       }
+      .textInput {
+        margin-top: 20px;
+        width: 90%;
+      }
+      #submit {
+        margin-top: 14px;
+        border: 2px solid tomato;
+        background: none;
+        border-radius: 14px;
+        text-decoration: none;
+        font-size: 12px;
+        box-shadow: 0px 4px 28px 1px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s all;
+      }
+      #submit:active {
+        transform: scale(0.98);
+        box-shadow: 0px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      }
     </style>
   </head>
   <body>
-    <div id="inputs">
-      <input type="text" class="textInput" id="Prefix" placeholder="Prefix" />
-      <input type="text" class="textInput" id="text" placeholder="Commands" />
-      <input type="button" id="submit" value="Voila" />
-    </div>
     <div>
+      <h3>PREFIX ADDER</h3>
+      <textarea
+        name="text"
+        id="commands"
+        cols="50"
+        rows="10"
+        placeholder="Commands"
+        class="textInput"
+      ></textarea>
+      <input
+        type="text"
+        class="textInput"
+        id="Prefix"
+        placeholder="Enter Prefix"
+      />
+      <input type="button" id="submit" value="Voila" />
       <p id="output">Your output will go here</p>
     </div>
   </body>
